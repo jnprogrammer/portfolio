@@ -31,23 +31,47 @@
     </div>
   </nav>
 
-  <header class="bg-blue-600 dark:bg-blue-800 text-white py-16 text-center">
-    <div class="container mx-auto">
-      <img src="assets/me2.jpeg" alt="Joshua Parker Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
-      <h1 class="text-4xl font-bold">Joshua Parker</h1>
-      <p class="mt-2 text-lg">DevOps Engineer</p>
-      <p class="mt-2">
-        <a href="mailto:joshuanparker@gmail.com" class="underline hover:text-blue-200">joshuanparker@gmail.com</a> | (919) 344-5095 | Goldsboro, NC | 
-        <a href="https://www.linkedin.com/in/joshua-parker-51238267/" class="underline hover:text-blue-200" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </p>
+  <header class="bg-blue-600 dark:bg-blue-800 text-white py-16">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-6 px-4">
+      <div class="flex flex-col items-center group">
+        <img src="assets/me2.jpeg" alt="Joshua Parker Profile Picture"
+          class="w-48 h-48 rounded-lg shadow-lg animate-float-slow group-hover:animate-float-hover transition-transform duration-700">
+      </div>
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl font-bold">Joshua Parker</h1>
+        <p class="mt-2 text-lg">DevOps Engineer</p>
+        <p class="mt-2">
+          <a href="mailto:joshuanparker@gmail.com" class="underline hover:text-blue-200">joshuanparker@gmail.com</a> | (919) 344-5095 | Goldsboro, NC | 
+          <a href="https://www.linkedin.com/in/joshua-parker-51238267/" class="underline hover:text-blue-200" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+      </div>
     </div>
   </header>
+  <style>
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-18px); }
+    }
+    @keyframes float-hover {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-32px); }
+    }
+    .animate-float-slow {
+      animation: float-slow 40s ease-in-out infinite;
+    }
+    .group:hover .animate-float-slow {
+      animation: float-hover 40s ease-in-out infinite;
+    }
+    .animate-float-hover {
+      animation: float-hover 40s ease-in-out infinite;
+    }
+  </style>
 
   <section id="summary" class="py-12 px-4">
     <div class="container mx-auto">
       <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-600 dark:border-blue-400 pb-2">Summary</h2>
       <p class="text-lg">
-        DevOps Engineer with 3 years of experience specializing in automation, cloud services, and CI/CD processes. Proven track record in integrating monitoring tools and optimizing deployment strategies using AWS, Azure DevOps, and Kubernetes. Seeking to leverage expertise in infrastructure as code and security protocols to enhance operational efficiency in a dynamic DevOps role.
+        DevOps Engineer with 3 years of experience specializing in automation, cloud services, and CI/CD processes. Proven track record in integrating monitoring tools and optimizing deployment strategies using AWS, Azure DevOps, and Kubernetes. Although I haven't been in a DevOps role for a brief period, I continued developing my skills during that time and created this portfolio with multiple projects using CI/CD, AWS, and various DevOps tools like Grafana. Seeking to leverage expertise in infrastructure as code and security protocols to enhance operational efficiency in a dynamic DevOps role.
       </p>
     </div>
   </section>
@@ -118,11 +142,18 @@
   <section id="certifications" class="py-12 px-4">
     <div class="container mx-auto">
       <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-600 dark:border-blue-400 pb-2">Certifications</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-        <li>Developer - Associate | AWS | Aug 2024 | Cert. ID: df6815c42b9f4d22a39970bf9f967c63</li>
-        <li>Solutions Architect - Associate | AWS | Nov 2023 | Cert. ID: NHVN8TJKONFE1HWL</li>
-        <li>Terraform Associate 003 | HashiCorp | Dec 2023 | Cert. ID: e59e44d9-e1e0-4439-862f-e076daaa03fc</li>
-      </ul>
+      <div class="mb-4">
+        <h3 class="text-xl font-semibold">Developer - Associate</h3>
+        <p class="text-lg text-gray-700 dark:text-gray-300">AWS | Aug 2024 | Cert. ID: df6815c42b9f4d22a39970bf9f967c63</p>
+      </div>
+      <div class="mb-4">
+        <h3 class="text-xl font-semibold">Solutions Architect - Associate</h3>
+        <p class="text-lg text-gray-700 dark:text-gray-300">AWS | Nov 2023 | Cert. ID: NHVN8TJKONFE1HWL</p>
+      </div>
+      <div class="mb-4">
+        <h3 class="text-xl font-semibold">Terraform Associate 003</h3>
+        <p class="text-lg text-gray-700 dark:text-gray-300">HashiCorp | Dec 2023 | Cert. ID: e59e44d9-e1e0-4439-862f-e076daaa03fc</p>
+      </div>
     </div>
   </section>
 
@@ -130,7 +161,7 @@
     <div class="container mx-auto">
       <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-600 dark:border-blue-400 pb-2">Skills</h2>
       <div class="flex flex-wrap gap-2">
-        <span class="bg-blue-100 dark:bg-blue-700 text-blue-800tingham dark:text-blue-100 px-3 py-1 rounded-full text-sm">AWS</span>
+        <span class="bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">AWS</span>
         <span class="bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">Terraform</span>
         <span class="bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">ECS</span>
         <span class="bg-blue-100 dark:bg-blue-700 text-blue-800 dark:text-blue-100 px-3 py-1 rounded-full text-sm">Containerization</span>
