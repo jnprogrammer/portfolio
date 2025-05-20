@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Parker - Projects</title>
+  <title>Projects - Joshua Parker</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    // Apply saved theme on page load
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
     tailwind.config = {
       darkMode: 'class',
       theme: { extend: {} }
@@ -23,7 +32,6 @@
         <a href="index.html#education" class="text-white hover:text-blue-200 transition-colors">Education</a>
         <a href="index.html#certifications" class="text-white hover:text-blue-200 transition-colors">Certifications</a>
         <a href="index.html#skills" class="text-white hover:text-blue-200 transition-colors">Skills</a>
-        <a href="index.html#future-expansion" class="text-white hover:text-blue-200 transition-colors">Future Expansion</a>
         <button onclick="document.documentElement.classList.toggle('dark')" class="text-white hover:text-blue-200" aria-label="Toggle dark mode">
           Toggle Theme
         </button>
@@ -46,7 +54,7 @@
         <div class="p-6 rounded-lg odd:bg-gray-200 odd:dark:bg-gray-700 even:bg-gray-300 even:dark:bg-gray-600">
           <div class="flex flex-col md:flex-row gap-4">
             <div class="flex-1">
-              <h3 class="text-xl font-semibold mb-2">Warehouse IT Management System</h3>
+              <h3 class="text-xl font-semibold mb-2">Static website</h3>
               <a href="https://example.com/warehouse-it" target="_blank" rel="noopener noreferrer">
                 <img src="https://via.placeholder.com/400x300?text=Warehouse+IT+System" alt="Warehouse IT Management System" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity">
               </a>
@@ -72,7 +80,7 @@
         <div class="p-6 rounded-lg odd:bg-gray-200 odd:dark:bg-gray-700 even:bg-gray-300 even:dark:bg-gray-600">
           <div class="flex flex-col md:flex-row gap-4">
             <div class="flex-1">
-              <h3 class="text-xl font-semibold mb-2">Azure DevOps Pipeline Optimization</h3>
+              <h3 class="text-xl font-semibold mb-2">AWS Pipeline Optimization</h3>
               <a href="https://example.com/azure-devops" target="_blank" rel="noopener noreferrer">
                 <img src="https://via.placeholder.com/400x300?text=Azure+DevOps+Pipeline" alt="Azure DevOps Pipeline Optimization" class="w-full h-auto rounded-lg shadow-md hover:opacity-90 transition-opacity">
               </a>
